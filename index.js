@@ -1,17 +1,10 @@
 import {
   BoxGeometry,
-  BufferGeometry,
   Color,
-  DataTexture,
-  Line,
-  LineBasicMaterial,
-  LuminanceFormat,
   Mesh,
   MeshBasicMaterial,
-  MeshToonMaterial,
   PerspectiveCamera,
   Scene,
-  Vector3,
   WebGLRenderer,
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -51,23 +44,6 @@ const run = (f) => {
   animate();
 };
 
-const basic_cube = (scene, camera) => {
-  const geometry = new BoxGeometry(1, 1, 1);
-  const material = new MeshBasicMaterial({
-    color: 'tomato',
-  });
-  console.log(material);
-  console.log('created material...');
-  [0, 1, 2, 3, 4].forEach((i) => {
-    const cube = new Mesh(geometry, material);
-    cube.position.set(i, 0, i);
-    scene.add(cube);
-  });
-  camera.position.z = 5;
-  return {
-    update: () => {},
-  };
-};
 
 const colors = ['#000000', '#000000', '#6d482f', '#7eed56', '#9c6926', '#ff99aa', '#ffa800', '#ffd635', '#ffffff']
 const image = "001000000000000131100010000000167101311000001661001671000001111016610000122221411110011444444444210122244248142111442242455441144422424421101144242424100001111111110000";
