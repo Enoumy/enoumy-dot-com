@@ -1,0 +1,77 @@
+<html>
+
+<head>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap');
+
+		:root {
+			background-color: #ffffff;
+			font-family: "Jacquarda Bastarda 9", serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		* {
+			margin: 0;
+		}
+
+		.root {
+			height: 100vh;
+			width: 100vw;
+			position: relative;
+		}
+
+		.bottom {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.top {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}
+
+		.overlay-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 4rem;
+			overflow: hidden;
+			padding: 2rem;
+			text-align: center;
+			text-wrap: balance;
+			user-select: none;
+		}
+	</style>
+	<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@v0.161.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@v0.161.0/examples/jsm/"
+    }
+  }
+</script>
+	<script defer type="module" src="index.js"></script>
+</head>
+
+<body>
+	<div class="root">
+		<div class="top overlay-text">
+			<span>al fin. mis <b>pensamientos</b>. estan en orden <i>pefecto</i>.</span>
+		</div>
+		<div class="bottom" id="threejsbox"></div>
+	</div>
+</body>
+
+</html>
